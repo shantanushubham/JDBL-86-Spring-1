@@ -1,0 +1,30 @@
+Annotation: It is a form of metadata in Java that provides information about the program
+but is not part of the program logic itself. Annotations do not directly affect code execution
+but they can be used by compiler, tools or frameworks at compile tile or runtime to
+influence behaviour.
+
+1. @SpringBootApplication
+    - @Configuration - Marks the class as a source of bean definitions (Like <beans> in config file)
+    - @EnableAutoConfiguration - Tells Spring Boot to automatically configure beans on the dependencies.
+    - @ComponentScan - Scans the package & subpackages where the classes are marked as bean.
+
+2. @Component - Marks a class as a bean.
+3. @Repository - @Component but used for repository classes/interfaces.
+                    It has extra Database related exception handling features
+4. @Service - @Component but used for classes with business logic.
+5. @Controller - @Component but is used for handling HTTP requests and returns views (HTML, JSP, Thymeleaf)
+6. @RestController
+    - @Controller
+    - @ResponseBody - all methods return JSON/XML instead of views. Best for Spring Boot
+
+7. @Bean - tells Sping how to create a bean. Used inside a class marked with @Configuration
+8. @Scope - used to set scope of a bean.
+
+// Homework
+8. @GetMapping / @PostMapping / @PutMapping / @DeleteMapping - used for GET/POST/PUT/DELETE REST Calls
+    @PatchMapping / @HeadMapping / @OptionsMapping
+
+9. @RequestBody
+10. @RequestParam - looks like abc.com?id=123 (used for not mandatory)
+11. @PathVariable - looks like abc.com/123 (always mandatory)
+12. @RequestHeader

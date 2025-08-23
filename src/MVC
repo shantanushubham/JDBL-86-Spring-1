@@ -1,0 +1,15 @@
+M - Model: Models are classes. Each model contains information of the real world things
+        for which we are building the application.
+V - View: A HTML/JSP/Thymeleaf page that is to be returned in response.
+C - Controller: The part of the code that handles incoming requests & outgoing responses.
+
+REST - REpresentational State Transfer
+1. Client-Server Separation:
+2. Statelessness: The server doesn't store client context between requests.
+3. Uniform Interface:
+4. Resource Based: Every request is uniquely identified by a combination of URL + Request Type
+5. Representation Oriented: They can be represented in forms of JSON, XML, HTML etc.
+        Clients will interact with representation of the data.
+6. Cacheable: Responses can be cached to improve performance.
+7. Layered System: The client doesn't need to know that it's talking directly or
+        indirectly through middlemen (API gateway, load balancers, Proxies, VPNs)
