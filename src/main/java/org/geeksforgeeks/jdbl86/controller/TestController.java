@@ -1,6 +1,8 @@
 package org.geeksforgeeks.jdbl86.controller;
 
-import org.geeksforgeeks.jdbl86.ex.Food;
+import org.geeksforgeeks.jdbl86.execptions.NotFoundException;
+import org.geeksforgeeks.jdbl86.model.ErrorResponse;
+import org.geeksforgeeks.jdbl86.model.Food;
 import org.geeksforgeeks.jdbl86.service.TestService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,8 +31,17 @@ public class TestController {
     }
 
     @GetMapping("/get_item")
-    public Food makePizza(@RequestParam int id) throws IOException {
-        return this.testService.getFoodById(id);
+    public ResponseEntity<?> makePizza(@RequestParam int id) throws IOException {
+        try {
+            Food food = this.testService.getFoodById(id);
+            return new ResponseEntity<>(food, HttpStatus.OK);
+        } catch (NotFoundException e) {
+            return new ResponseEntity<>(
+                    ErrorResponse.builder()
+                            .message(e.getMessage())
+                            .build(),
+                    HttpStatus.NOT_FOUND);
+        }
     }
 
     @PostMapping("/add_item")

@@ -1,4 +1,4 @@
-package org.geeksforgeeks.jdbl86.ex;
+package org.geeksforgeeks.jdbl86.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
