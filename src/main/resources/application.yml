@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: JDBL 86
+
+aspect:
+  logging: true
