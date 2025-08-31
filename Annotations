@@ -28,3 +28,10 @@ influence behaviour.
 10. @RequestParam - looks like abc.com?id=123 (used for not mandatory)
 11. @PathVariable - looks like abc.com/123 (always mandatory)
 12. @RequestHeader
+
+13. @Qualifier
+14. @Primary
+15. @Id
+16. @Entity
+17. @Transactional
+18. @Version
