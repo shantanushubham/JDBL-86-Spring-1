@@ -1,7 +1,6 @@
 package org.geeksforgeeks.jdbl86.service;
 
-import jakarta.transaction.Transactional;
-import org.geeksforgeeks.jdbl86.model.Employee;
+import org.geeksforgeeks.jdbl86.entity.EmployeeEntity;
 import org.geeksforgeeks.jdbl86.repository.impl.EmployeeRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,25 +13,20 @@ public class EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    public Employee addEmployee(Employee employee) {
-        return this.employeeRepository.saveEmployee(employee);
+    public EmployeeEntity addEmployee(EmployeeEntity employeeEntity) {
+        return this.employeeRepository.saveEmployee(employeeEntity);
     }
 
-    public Employee getEmployeeById(int id) {
+    public EmployeeEntity getEmployeeById(int id) {
         return this.employeeRepository.getById(id);
     }
 
-    public Employee updateEmployee(Employee employee) {
-        return this.employeeRepository.saveEmployee(employee);
+    public EmployeeEntity updateEmployee(EmployeeEntity employeeEntity) {
+        return this.employeeRepository.saveEmployee(employeeEntity);
     }
 
     public void deleteEmployeeById(int id) {
         this.employeeRepository.deleteEmployee(id);
     }
 
-    @Transactional
-    public void transactionExample() {
-        this.addEmployee(new Employee(0, "Tanishqa", "Bank"));
-        this.deleteEmployeeById(2);
-    }
 }

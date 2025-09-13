@@ -1,6 +1,6 @@
 package org.geeksforgeeks.jdbl86.repository.impl;
 
-import org.geeksforgeeks.jdbl86.model.Employee;
+import org.geeksforgeeks.jdbl86.entity.EmployeeEntity;
 import org.geeksforgeeks.jdbl86.repository.jpa.EmployeeJPARepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,17 +16,17 @@ public class EmployeeRepository {
     }
 
     // CREATE + UPDATE (Upsert)
-    public Employee saveEmployee(Employee employee) {
-        return this.employeeJPARepository.save(employee);
+    public EmployeeEntity saveEmployee(EmployeeEntity employeeEntity) {
+        return this.employeeJPARepository.save(employeeEntity);
     }
 
     // READ/RETRIEVE
-    public Employee getById(int id) {
+    public EmployeeEntity getById(int id) {
         return this.employeeJPARepository.findById(id).orElse(null);
     }
 
     // READ/RETRIEVE
-    public Employee getByName(String name) {
+    public EmployeeEntity getByName(String name) {
         return this.employeeJPARepository.findByName(name).orElse(null);
     }
 

@@ -35,3 +35,4 @@ influence behaviour.
 16. @Entity
 17. @Transactional
 18. @Version
+19. @Enumerated

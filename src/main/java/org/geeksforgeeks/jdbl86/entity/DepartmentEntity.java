@@ -1,4 +1,4 @@
-package org.geeksforgeeks.jdbl86.model;
+package org.geeksforgeeks.jdbl86.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -8,17 +8,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @JsonDeserialize
 @JsonSerialize
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
-@Table(name = "employees")
-public class Employee {
+@Table(name = "departments")
+public class DepartmentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +29,4 @@ public class Employee {
 
     @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "department", nullable = false)
-    private String department;
-
 }

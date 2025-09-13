@@ -1,21 +1,16 @@
-package org.geeksforgeeks.jdbl86.model;
+package org.geeksforgeeks.jdbl86.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import lombok.*;
+import lombok.Data;
 
 @JsonDeserialize
 @JsonSerialize
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Setter
-@Getter
-@Builder
-@With
-public class Food {
+@Data
+public class EmployeeDto {
 
-    private int id;
     private String name;
+    private int departmentId;
 
 }

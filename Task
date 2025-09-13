@@ -1,0 +1,35 @@
+1. Create a new Spring Boot Project
+2. Connect with Postgres
+3. Create User Entity with
+    - id
+    - first name
+    - last name
+    - email
+    - date of birth (use LocalDate class)
+4. Create JPA Repository.
+
+13/09/2025
+5. Create UserRepository, UserService & UserController
+6. Add a functionality of adding a new user to the DB
+7. You must not add a user in the DB with the same email address
+        i.e. email must always be unique.
+8. If a someone tries to add a user with duplicate email, throw a
+        response with status code (400 - BAD_REQUEST)
+
+9. Create CRUD for Books
+    - id
+    - name
+    - author
+    - price (float/double)
+    - isbn (unique = true)
+
+HW
+10. Adding CRUD operations to users
+11. Adding CRUD for book issue
+        - find by User (active books)
+12. At the time of issuing a book to user,
+        check their active book issues
+        if the no is less than their subscription type allowance
+            then issue
+        else throw exception and show Response Code - 403 FORBIDDEN
+
