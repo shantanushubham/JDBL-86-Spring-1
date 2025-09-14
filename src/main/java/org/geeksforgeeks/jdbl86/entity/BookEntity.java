@@ -1,6 +1,16 @@
 package org.geeksforgeeks.jdbl86.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+@JsonSerialize
+@JsonDeserialize
+
+@Getter
+@Setter
 
 @Entity
 @Table(name = "books")

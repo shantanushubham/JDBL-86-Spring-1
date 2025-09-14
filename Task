@@ -23,7 +23,6 @@
     - price (float/double)
     - isbn (unique = true)
 
-HW
 10. Adding CRUD operations to users
 11. Adding CRUD for book issue
         - find by User (active books)
@@ -32,4 +31,9 @@ HW
         if the no is less than their subscription type allowance
             then issue
         else throw exception and show Response Code - 403 FORBIDDEN
+
+
+HW
+Add index on author and title in the books table
+Study about Records in Java (Java 17 and above)
 

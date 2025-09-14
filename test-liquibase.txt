@@ -1,0 +1,9 @@
+Only for teaching purposes
+
+--changeset shantanu:1
+-- Creating User Table
+CREATE TABLE user_table IF NOT EXISTS (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    ...
+)
