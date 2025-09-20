@@ -28,8 +28,7 @@ public class BookIssueService {
     }
 
     public List<BookIssueCount> getNMostIssuedBooks(int n) {
-        List<BookIssueCount> bookIssueCounts = this.bookIssueRepository.getTopNIssuedBooks(n);
-        return bookIssueCounts;
+        return this.bookIssueRepository.getTopNIssuedBooks(n);
     }
 
     public List<BookEntity> getActiveBooksIssuedByUser(long userId) {
