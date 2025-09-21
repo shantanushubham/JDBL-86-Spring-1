@@ -37,3 +37,10 @@ HW
 Add index on author and title in the books table
 Study about Records in Java (Java 17 and above)
 
+
+Task
+1. Create a RedisService and add a key value pair -> name = "Geeksforgeeks" (expires after 30 mins)
+2. Create a controller method to read that key-value
+3. Create a new Java file, and use curl to trigger the endpoint you created in controller.
+    - Use a thread-pool of 10 threads and all of them should trigger the endpoint concurrently
+    - Total requests to be made should be 200.
