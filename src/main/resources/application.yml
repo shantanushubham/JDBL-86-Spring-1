@@ -26,5 +26,23 @@ spring:
     port: 6379
 #    password:
 
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id:
+            client-secret:
+            scope: read:user
+            redirect-uri: http://localhost:8080/login/oauth2/code/github
+            client-name: GitHub
+
+        provider:
+          github:
+            authorization-uri: https://github.com/login/oauth/authorize
+            token-uri: https://github.com/login/oauth/access_token
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: login
+
 aspect:
   logging: true

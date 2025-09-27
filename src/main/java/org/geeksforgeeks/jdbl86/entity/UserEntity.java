@@ -40,6 +40,9 @@ public class UserEntity {
     // if the email is duplicate or not in DB
     private String email;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column(name = "dob", nullable = false)
     private LocalDate dateOfBirth;
 

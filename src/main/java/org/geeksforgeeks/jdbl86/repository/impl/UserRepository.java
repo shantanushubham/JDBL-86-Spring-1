@@ -28,4 +28,9 @@ public class UserRepository {
         return this.userJPARepository.findById(userId).orElseThrow(() ->
                 new NotFoundException(UserEntity.class, "id", userId));
     }
+
+    public UserEntity getUserByEmail(String email) {
+        return this.userJPARepository.findByEmail(email).orElseThrow(() ->
+                new NotFoundException(UserEntity.class, "email", email));
+    }
 }
